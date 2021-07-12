@@ -1,0 +1,27 @@
+﻿@model IEnumerable<AspNetCoreKata.Shared.Product>
+
+@{
+  ViewData["Title"] = "Products";
+}
+<h2>@ViewData["Title"]</h2>
+
+<br/>
+
+<table class="table">
+  <tr>
+    <th> @Html.DisplayNameFor(model => model.ProductID) </th>
+    <th> @Html.DisplayNameFor(model => model.Name)      </th>
+    <th> @Html.DisplayNameFor(model => model.Color)     </th>
+    <th> &nbsp;                                         </th>
+  </tr>
+
+  @foreach (var item in Model) {
+    <tr>
+      <td> @Html.DisplayFor(modelItem => item.ProductID) </td>
+      <td> @Html.DisplayFor(modelItem => item.Name)      </td>
+      <td> @Html.DisplayFor(modelItem => item.Color)     </td>
+      <td> @Html.ActionLink("Edit", "Edit", "Product", new { id = item.ProductID }) </td>
+    </tr>
+  }
+
+</table>
