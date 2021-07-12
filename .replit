@@ -1,2 +1,0 @@
-language = "c#"
-run="./dotnet watch -p AspNetCoreKata/AspNetCoreKata run"
